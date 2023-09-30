@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="container mi-clase">
+      <div class="row mt-3">
+        <div class="col">
+          <form id="limpiarFormulario" onsubmit="formulario(); return false;">
+            <div class="row m-4">
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                 type="text"
+                 class="form-control"
+                 placeholder="Nombre" 
+                 name="nombre"
+                 autocomplete="nope"
+                 maxlength="20"
+                 tabindex="1"
+                 autofocus
+                 required
+                 id="nombre"
+                >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input
+                 type="text"
+                 class="form-control"
+                 placeholder="Apellido"
+                 name="apellido"
+                 autocomplete="nope"
+                 maxlength="20"
+                 tabindex="2"
+                 required
+                 id="apellido"
+                >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                   <label for="fecha" class="form-label">Fecha</label>
+                   <input
+                    type="date"
+                    class="form-control"
+                    name="fecha"
+                    autocomplete="nope"
+                    tabindex="3"
+                    required
+                    id="fecha"
+                   >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                   <label for="correo" class="form-label">Correo</label>
+                   <input
+                   type="email"
+                   class="form-control"
+                   placeholder="Correo Electrónico"
+                   name="correo"
+                   autocomplete="nope"
+                   maxlength="100"
+                   tabindex="4"
+                   required
+                   id="correo"
+                   >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input
+                type="tel"
+                class="form-control"
+                placeholder="Teléfono"
+                name="telefono"
+                autocomplete="nope"
+                maxlength="8"
+                tabindex="5"
+                required
+                id="telefono"
+                >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input
+                type="password"
+                class="form-control"
+                placeholder="Contraseña"
+                name="contrasena"
+                autocomplete="nope"
+                maxlength="15"
+                tabindex="6"
+                required
+                id="contrasena"
+                >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label for="monto" class="form-label">Monto</label>
+                <input
+                type="text"
+                class="form-control text-end"
+                name="monto"
+                autocomplete="nope"
+                maxlength="12"
+                tabindex="7"
+                required
+                id="monto"
+                >
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label class="form-label">País</label>
+                <select class="form-select" name="pais" tabindex="8" required id="pais">
+                  <option value="" disabled selected>Seleccione un país</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="España">España</option>
+                  <option value="Panama">Panamá</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label class="form-label">Estado Civil</label>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" name="estado-civil" tabindex="9" required id="soltero">
+                   <label for="soltero" class="form-check-label">Soltero</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" name="estado-civil" tabindex="10" required id="casado">
+                  <label for="casado" class="form-check-label">Casado</label>
+                </div>
+              </div>
+
+
+              <div class="col-12 col-md-12 col-lg-12 mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                name="mensaje"
+                class="form-control"
+                placeholder=""
+                autocomplete="nope"
+                maxlength="100"
+                tabindex="11"
+                required
+                id="mensaje"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-md-12 d-flex justify-content-center mb-4">
+                  <div>
+                      <div class="form-check mb-3">
+                        <input
+                        type="checkbox"
+                        name="terminos"
+                        class="form-check-input"
+                        tabindex="12"
+                        required
+                        id="terminos"
+                        >
+                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
+                      </div>
+                      <button type="submit" class="col-12 btn btn-dark" tabindex="13">Registrar</button>
+                  </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
